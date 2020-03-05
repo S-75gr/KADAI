@@ -15,15 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'admin'], function() {
-    route::get('news/create', 'Admin\NewsController@add');
-});
+// Route::group(['prefix' => 'admin'], function() {
+//     route::get('news/create', 'Admin\NewsController@add');
+// });
 
 
 //課題3
-Route::group(['prefix' => 'XXX'], function() {
-    Route::get('/XXX', 'Admin/AAAController@bbb');
-});
+// Route::group(['prefix' => 'XXX'], function() {
+//     Route::get('/XXX', 'Admin/AAAController@bbb');
+// });
 
 //課題4
 Route::group(['prefix' => 'admin'], function() {
