@@ -28,6 +28,14 @@ Route::get('/', function () {
 //課題4
 Route::group(['prefix' => 'admin'], function() {
     route::get('news/create', 'Admin\NewsController@add');
-    route::get('profile/create', 'Admin\ProfileController@add');
-    route::get('profile/edit', 'Admin\ProfileController@edit');
+    route::get('profile/create', 'Admin\ProfileController@add')->middleware('auth');
+    route::get('profile/edit', 'Admin\ProfileController@edit')->middleware('auth');
+    route::get('news/create', 'Admin\NewsController@add')->middleware('auth');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
