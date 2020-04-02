@@ -25,20 +25,24 @@ Route::get('/', function () {
 //     Route::get('/XXX', 'Admin/AAAController@bbb');
 // });
 
-//課題4
+
 Route::group(['prefix' => 'admin'], function() {
-    route::get('news/create', 'Admin\NewsController@add');
-    route::post('news/cretae', 'Admin\NewsController@create');
     route::get('profile/create', 'Admin\ProfileController@add')->middleware('auth');
     route::post('profile/create', 'Admin\ProfileController@create')->middleware('auth');
     route::get('profile/edit', 'Admin\ProfileController@edit')->middleware('auth');
     route::post('profile/edit', 'Admin\ProfileController@update')->middleware('auth');
+    route::get('profile', 'Admin\ProfileController@index')->middleware('auth');
+    route::get('profile/delete', 'Admin\ProfileController@delete')->middleware('auth');
+    //
     route::get('news/create', 'Admin\NewsController@add')->middleware('auth');
+    route::post('news/create', 'Admin\NewsController@create')->middleware('auth');
+    route::get('news', 'Admin\NewsController@index')->middleware('auth');
+    route::get('news/edit', 'Admin\NewsController@edit')->middleware('auth');
+    route::post('news/edit', 'Admin\NewsController@update')->middleware('auth');
+    route::get('news/delete', 'Admin\NewsController@delete')->middleware('auth');
 });
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'NewsController@index');
+Route::get('/profile', 'ProfileController@index');
