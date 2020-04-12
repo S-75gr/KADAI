@@ -5,14 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\HTML;
 
-// 追記
 use App\News;
 
 class NewsController extends Controller
 {
     public function index(Request $request)
     {
-        $posts = News::all()->sortBy('updated_at');
+        $posts = News::all()->sortByDesc('updated_at');
 
         if (count($posts) > 0) {
             $headline = $posts->shift();
@@ -21,7 +20,7 @@ class NewsController extends Controller
         }
 
         // news/index.blade.php ファイルを渡している
-        // また View テンプレートに headline、 posts、という変数を渡している
+        // また View テンプレートに headline、 postsという変数を渡している
         return view('news.index', ['headline' => $headline, 'posts' => $posts]);
     }
 }
