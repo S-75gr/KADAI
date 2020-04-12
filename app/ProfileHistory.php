@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProfileHistory extends Model
 {
-    protected $table = 'profilehistories';
+    protected $table = 'profile_histories';
     protected $guarded = array('id');
     
     public static $rules = array(
