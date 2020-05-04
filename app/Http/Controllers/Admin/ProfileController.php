@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace ONEPIECE\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use ONEPIECE\Http\Controllers\Controller;
 
-use App\Profile;
-use App\ProfileHistory;
+use ONEPIECE\Profile;
+use ONEPIECE\ProfileHistory;
 use Carbon\Carbon;
 
 

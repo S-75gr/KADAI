@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace ONEPIECE\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\HTML;
 
-use App\News;
+use ONEPIECE\News;
 
 class NewsController extends Controller
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace ONEPIECE;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,6 +16,6 @@ class History extends Model
     //ProfileHistoryモデルに関連付けを行う。
     public function ProfileHistory()
     {
-        return $this->hasMany('App\ProfileHistory');
+        return $this->hasMany('ONEPIECE\ProfileHistory');
     }
 }

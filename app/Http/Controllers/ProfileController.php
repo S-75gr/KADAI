@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace ONEPIECE\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\HTML;
 
-use App\Profile;
+use ONEPIECE\Profile;
 
 class ProfileController extends Controller
 {

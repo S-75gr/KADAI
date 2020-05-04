@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Akihiro'),
+    'name' => env('APP_NAME', 'ONEPIECE'),
 
     /*
     |--------------------------------------------------------------------------
@@ -169,11 +169,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        ONEPIECE\Providers\AppServiceProvider::class,
+        ONEPIECE\Providers\AuthServiceProvider::class,
+        // ONEPIECE\Providers\BroadcastServiceProvider::class,
+        ONEPIECE\Providers\EventServiceProvider::class,
+        ONEPIECE\Providers\RouteServiceProvider::class,
 
     ],
 

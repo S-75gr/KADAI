@@ -1,10 +1,10 @@
 <?php
-namespace App\Http\Controllers\Admin;
+namespace ONEPIECE\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\News;
-use App\History;
+use ONEPIECE\Http\Controllers\Controller;
+use ONEPIECE\News;
+use ONEPIECE\History;
 use Carbon\Carbon;
 use Storage;
 
