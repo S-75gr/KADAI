@@ -66,7 +66,10 @@
                                                 @csrf
                                             </form>
                                         </div>
-                                    </li>
+                                    </li>  
+                                    <li><a class="nav-link" href="{{ action('Admin\NewsController@index') }}">{{ __('News') }}</a></li>
+                                    <li><a class="nav-link" href="{{ action('Admin\ProfileController@index') }}">{{ __('Profile') }}</a></li>
+
                                     @endguest
                                     {{-- 以上までを追記 --}}
                                 <!-- Right Side Of Navbar -->
