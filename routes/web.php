@@ -19,13 +19,6 @@ Route::get('/', function () {
 //     route::get('news/create', 'Admin\NewsController@add');
 // });
 
-
-//課題3
-// Route::group(['prefix' => 'XXX'], function() {
-//     Route::get('/XXX', 'Admin/AAAController@bbb');
-// });
-
-
 Route::group(['prefix' => 'admin'], function() {
     route::get('profile/create', 'Admin\ProfileController@add')->middleware('auth');
     route::post('profile/create', 'Admin\ProfileController@create')->middleware('auth');

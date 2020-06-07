@@ -25,7 +25,7 @@ body {
 }
 
 .headline .caption .title h1 {
-  color: #fff;
+  color: #808080;
   font-size: 1.2em;
 }
 
@@ -35,7 +35,7 @@ body {
 
 .posts .post .date {
   font-size: 0.6em;
-  color: #999999;
+  color: #808080;
 }
 
 .posts .post .title {

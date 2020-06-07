@@ -41,9 +41,6 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <!-- Left Side Of Navbar -->
                                 <ul class="navbar-nav mr-auto">
-                                    
-                                    
-                                    {{-- 以下を追記 --}}
                                 <!-- Authentication Links -->
                                 {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
                                 @guest
@@ -60,15 +57,13 @@
                                                onclick="event.preventDefault();
                                                              document.getElementById('logout-form').submit();">
                                                 {{ __('Logout') }}
-                                            </a>
-        
+                               
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                 @csrf
                                             </form>
                                         </div>
                                     </li>
                                     @endguest
-                                    {{-- 以上までを追記 --}}
                                 <!-- Right Side Of Navbar -->
                                 <ul class="navbar-nav ml-auto">
                                 </ul>
