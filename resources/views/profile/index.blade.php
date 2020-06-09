@@ -17,7 +17,7 @@
                         <div class="col-md-6">
                             <p class="gender mx-auto">{{ str_limit($headline->gender, 70) }}</p>
                             <p class="hobby mx-auto">{{ str_limit($headline->hobby, 70) }}</p>
-                            <p class="introduction mx-auto">{{ str_limit($headline->introduction, 70) }}</p>
+                            <p class="introduction mx-auto">{{ str_limit($headline->introduction, 2000) }}</p>
                         </div>
                     </div>
                 </div>
