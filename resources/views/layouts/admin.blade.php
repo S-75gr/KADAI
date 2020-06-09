@@ -41,15 +41,17 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mr-auto">
-
                         </ul>
 
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
+                            
                         <!-- Authentication Links -->
+                        
                         {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
                         @guest
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                            
                         {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
                         @else
                             <li class="nav-item dropdown">
@@ -70,9 +72,9 @@
                                 </div>
                             </li>
                             
-                            <li><a id="navbarDropdown" class="nav-link" href="{{ action('Admin\ProfileController@index') }}">{{ __('Profile') }}</a></li>
-                            <li><a id="navbarDropdown" class="nav-link" href="{{ action('Admin\NewsController@index') }}">{{ __('News') }}</a></li>
-                            
+                            <li><a id="navbarDropdown" class="nav-link" href="{{ action('Admin\ProfileController@index') }}">{{ __('ProfileEdit') }}</a></li>
+                            <li><a id="navbarDropdown" class="nav-link" href="{{ action('Admin\NewsController@index') }}">{{ __('NewsEdit') }}</a></li>
+                            <li><a id="navbarDropdown" class="nav-link" href="{{ action('ProfileController@index') }}">{{ __('Profile') }}</a></li>
                             @endguest
                         </ul>
                     </div>
